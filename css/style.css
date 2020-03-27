@@ -1,0 +1,448 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,700,900&display=swap&subset=cyrillic-ext");
+@import url("https://fonts.googleapis.com/css?family=Playfair+Display:400,700|Roboto:300,400,700,900&display=swap&subset=cyrillic-ext");
+
+body {
+  background: #0a090a;
+  color: white;
+  font-family: "Roboto", sans-serif;
+  /* Убрал бордеры и отступы у тега боди */
+  border: none;
+
+  margin: 0;
+  background-image: url("../img/main-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  background-position: center;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  /* Убрал отступы у заголовков */
+  margin: 0;
+}
+
+/* Container */
+
+.container {
+  width: 100%;
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+/* Header */
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 45px;
+
+  margin-bottom: 30%;
+}
+.header_search {
+  display: flex;
+  /* Флекс нужен дабы размер поля ввода подстраивался под ширину экрана */
+  flex: 0.8;
+}
+.user_avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-left: 20px;
+
+  /* Подстраивает картинку под заданные размеры, дабы не плющило */
+  object-fit: cover;
+}
+.header_logo {
+  font-size: 24px;
+  font-weight: 900;
+  font-family: "Roboto", sans-serif;
+  line-height: 28px;
+}
+.search_input {
+  flex: 1;
+  background: rgba(196, 196, 196, 0.5);
+  border-radius: 5px;
+  padding: 12px 18px;
+
+  border: none;
+  color: #aeaeae;
+  font-size: 14px;
+  line-height: 16px;
+}
+::-webkit-input-placeholder {
+  /* Chrome */
+  color: #aeaeae;
+}
+:-ms-input-placeholder {
+  /* IE 10+ */
+  color: #aeaeae;
+}
+::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #aeaeae;
+  opacity: 1;
+}
+:-moz-placeholder {
+  /* Firefox 4 - 18 */
+  color: #aeaeae;
+  opacity: 1;
+}
+.search_btn {
+  background-color: transparent;
+  color: #aeaeae;
+  border: none;
+  font-size: 25px;
+
+  padding: 10px 18px;
+}
+.header_user {
+  display: flex;
+  align-items: center;
+}
+.header_user i {
+  transition: color 0.1s linear;
+}
+.header_user i:hover {
+  color: #60914a;
+}
+
+/* Main */
+
+.main_title {
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 64px;
+
+  color: #ffffff;
+  margin-bottom: 7px;
+}
+.main_title-en {
+  font-size: 20px;
+  line-height: 23px;
+  color: #787878;
+  margin-bottom: 38px;
+
+  /* Дисплей нужен для того, чтобы применился отступ, ибо спан строчный элемент */
+  display: inline-block;
+}
+.tag {
+  font-size: 16px;
+  line-height: 19px;
+  color: #333333;
+  padding: 5px 10px;
+
+  display: inline-block;
+  background: #ffffff;
+  border-radius: 3px;
+  margin-right: 20px;
+}
+.country {
+  font-size: 16px;
+  line-height: 19px;
+  color: #ffffff;
+  margin-right: 30px;
+}
+.play {
+  font-size: 16px;
+  line-height: 19px;
+  color: #ffffff;
+  text-decoration: none;
+
+  display: flex;
+  align-items: center;
+  transition: color 0.1s linear;
+}
+.play:hover {
+  color: #60914a;
+}
+.info_movie {
+  display: flex;
+  align-items: center;
+}
+.info_movie i {
+  vertical-align: middle;
+  font-size: 30px;
+  margin-right: 10px;
+}
+.main_info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+
+  margin-bottom: 100px;
+}
+.more {
+  color: #ffffff;
+  text-decoration: none;
+  position: absolute;
+  right: 40px;
+
+  transition: color 0.1s linear;
+}
+.more:hover {
+  color: #60914a;
+}
+.more_icon {
+  font-size: 30px;
+  vertical-align: middle;
+  transform: rotate(90deg);
+}
+
+/* Content */
+
+.content {
+  background: #ffffff;
+  border-radius: 3px;
+  color: #000000;
+  padding: 3% 4%;
+
+  display: flex;
+}
+.short_info {
+  margin-right: 0.5%;
+}
+.content_image {
+  display: block;
+  margin-top: -40%;
+  margin-bottom: 20px;
+  margin-right: 45px;
+}
+.watch {
+  background: #ff8f27;
+  font-size: 14px;
+  line-height: 16px;
+  padding: 10px 44px;
+
+  color: #ffffff;
+  border: none;
+  margin-bottom: 30px;
+}
+.actors_title {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 150%;
+  color: #000000;
+
+  margin-bottom: 10px;
+  padding-left: 15px;
+}
+.actors_list {
+  list-style: none;
+  padding-left: 15px;
+  text-decoration: underline;
+  margin: 0;
+
+  font-size: 16px;
+  line-height: 150%;
+}
+.menu_item {
+  color: #000000;
+  font-size: 18px;
+  line-height: 21px;
+  text-decoration: none;
+
+  margin-right: 4.7%;
+  transition: color 0.1s linear;
+}
+.menu_item:last-child {
+  margin-right: 0;
+}
+/* .menu_item:hover {
+  color: #ff8f27;
+}  */
+.menu_item i {
+  color: #ff8f27;
+}
+.active {
+  color: #ff8f27;
+}
+.full_content {
+  display: flex;
+}
+.content_about {
+  display: none;
+  margin-right: 70px;
+}
+.visible {
+  display: block;
+}
+.about_text {
+  font-size: 16px;
+  line-height: 140%;
+  color: #000000;
+  margin-top: 0;
+}
+.about_header {
+  font-size: 16px;
+  line-height: 140%;
+  color: #000000;
+  margin-bottom: 2%;
+}
+.content_menu {
+  margin-bottom: 5%;
+}
+.subscribe_title {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 150%;
+  color: #000000;
+
+  margin-bottom: 14px;
+}
+.subscribe_input {
+  font-size: 14px;
+  line-height: 16px;
+  color: #9b9b9b;
+  background: rgba(241, 241, 241, 0.5);
+
+  border-radius: 5px 0 0 5px;
+  border: none;
+  padding: 12px;
+}
+.subscribe_btn {
+  background: #ff8f27;
+  border-radius: 0px 5px 5px 0px;
+  border: none;
+  padding: 12px;
+}
+.subscribe_form {
+  display: flex;
+  margin-bottom: 48px;
+}
+
+/* Media */
+
+@media (max-width: 1200px) {
+
+  .container {
+    max-width: 960px;
+  }
+
+  .menu_item {
+    margin-right: 4.2%;
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 992px) {
+
+  .container {
+    max-width: 740px;
+  }
+
+  .content_image {
+    margin-top: -30%;
+  }
+
+  .content_menu {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .menu_item {
+    line-height: 2;
+    flex-basis: 20%;
+  }
+
+  .full_content {
+    flex-wrap: wrap;
+  }
+
+  .content_about {
+    margin-bottom: 4%;
+  }
+
+  .about_text {
+    font-size: 14px;
+  }
+
+  .actors_list {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .container {
+    max-width: 540px;
+  }
+
+  .more {
+    display: none;
+  }
+
+  .more_info i {
+    display: none;
+  }
+
+  .menu_item {
+    flex-basis: 33%;
+  }
+
+  .content_about {
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 578px) {
+
+  .container {
+    width: 90%;
+  }
+
+  .header {
+    flex-wrap: wrap;
+  }
+
+  .header_search {
+    flex-basis: 100%;
+    order: 3;
+    margin-top: 3%;
+  }
+
+  .content {
+    flex-wrap: wrap;
+  }
+
+  .actors_list,
+  .actors_title {
+    display: none;
+  }
+
+  .short_info {
+    margin-bottom: 5%;
+  }
+
+  .country {
+    font-size: 14px;
+  }
+
+  .play {
+    font-size: 14px;
+  }
+
+  .tag {
+    font-size: 14px;
+  }
+
+  .content_image {
+    display: inline-block;
+    width: 100%;
+    margin-top: -20%;
+  }
+
+  .short_info {
+    margin-right: 0;
+  }
+
+  .watch {
+    width: 100%;
+  }
+}
